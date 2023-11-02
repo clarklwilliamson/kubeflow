@@ -8,7 +8,7 @@ FROM $BASE_IMG
 ARG TARGETARCH
 
 # args - software versions
-ARG TENSORFLOW_VERSION=2.12.0
+ARG TENSORFLOW_VERSION=2.13.0
 
 # args - cuda versions
 #  - TF CUDA version matrix: https://www.tensorflow.org/install/source#gpu
@@ -61,7 +61,7 @@ ENV NVIDIA_REQUIRE_CUDA "cuda>=${CUDA_VERSION}"
 
 # install - tensorflow
 RUN python3 -m pip install --quiet --no-cache-dir \
-    tensorflow-gpu==${TENSORFLOW_VERSION}
+    tensorflow==${TENSORFLOW_VERSION}
 
 # install - requirements.txt
 COPY --chown=${NB_USER}:users requirements.txt /tmp
