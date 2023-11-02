@@ -61,7 +61,7 @@ ENV NVIDIA_REQUIRE_CUDA "cuda>=${CUDA_VERSION}"
 
 # install - tensorflow
 RUN python3 -m pip install --quiet --no-cache-dir \
-    tensorflow==${TENSORFLOW_VERSION}
+    tensorflow-gpu==${TENSORFLOW_VERSION}
 
 # install - requirements.txt
 COPY --chown=${NB_USER}:users requirements.txt /tmp
