@@ -8,7 +8,7 @@ FROM $BASE_IMG
 ARG TARGETARCH
 
 # args - software versions
-ARG TENSORFLOW_VERSION=2.13.0
+ARG TENSORFLOW_VERSION=2.12.0
 
 # args - cuda versions
 #  - TF CUDA version matrix: https://www.tensorflow.org/install/source#gpu
