@@ -18,7 +18,7 @@ GIT_TREE_STATE := $(shell test -n "`git status --porcelain`" && echo "-dirty" ||
 REGISTRY ?= docker.io/kubeflownotebookswg
 TAG      ?= sha-$(GIT_COMMIT)$(GIT_TREE_STATE)
 
-IMAGE_NAME := jupyter-scipy
+IMAGE_NAME := jupyter-pytorch-cuda
 
 BASE_IMAGE         := $(REGISTRY)/jupyter:$(TAG)
 BASE_IMAGE_FOLDERS := jupyter

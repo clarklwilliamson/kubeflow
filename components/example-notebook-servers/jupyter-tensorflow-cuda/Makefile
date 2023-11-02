@@ -15,10 +15,10 @@
 GIT_COMMIT     := $(shell git rev-parse HEAD)
 GIT_TREE_STATE := $(shell test -n "`git status --porcelain`" && echo "-dirty" || echo "")
 
-REGISTRY ?= docker.io/kubeflownotebookswg
+REGISTRY ?= docker.io/clarklwilliamson
 TAG      ?= sha-$(GIT_COMMIT)$(GIT_TREE_STATE)
 
-IMAGE_NAME := jupyter-scipy
+IMAGE_NAME := jupyter-tensorflow-cuda
 
 BASE_IMAGE         := $(REGISTRY)/jupyter:$(TAG)
 BASE_IMAGE_FOLDERS := jupyter
