@@ -26,3 +26,5 @@ RUN mamba install -y -q \
 COPY --chown=${NB_USER}:users requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install -r /tmp/requirements.txt --quiet --no-cache-dir \
  && rm -f /tmp/requirements.txt
+RUN apt-get -yq update
+RUN apt-get -yq dist-upgrade
